@@ -1,4 +1,8 @@
-DB_URL="mongodb://localhost:27017/"
+# read the environment variables
+import os
+import dotenv
+dotenv.load_dotenv()
+DB_URL = os.getenv('DB_URL')
 
 DB_NAME = "special_topic"
 COLLECTIONS = {
@@ -7,4 +11,3 @@ COLLECTIONS = {
     "borrows":"borrow-col",
     "author": "author-col"
 }
-
