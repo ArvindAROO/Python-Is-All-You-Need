@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "b25bde53-2767-4c49-a788-336eec422d8f",
+		"name": "PIAYN final proj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [{
+		"name": "CREATE STUDENT",
+		"id": "e7233df3-15bc-449a-8e62-a8008c20e7b2",
+		"request": {
+			"method": "PUT",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"name\": \"Aroo\",\n    \"SRN\": \"PES1UG19CS090\"\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/student/add"
+		},
+		"response": []
+	}, {
+		"name": "New Book",
+		"id": "4e47299d-ddc0-4d77-a125-51387fb4b675",
+		"request": {
+			"method": "PUT",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"name\": \"The Alchemist AGAIN\",\n    \"author_id\": \"\",\n    \"book_id\": \"sidASDAasddaddsSDsao\"\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/book/add"
+		},
+		"response": []
+	}, {
+		"name": "New borrow",
+		"id": "be1d2850-9c92-41c1-807d-7d4a46c1c0df",
+		"request": {
+			"method": "PUT",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"borrow_id\": \"rdsatyui\",\n    \"book_id\": \"sidASDASDsao\",\n    \"SRN\": \"PES1UG19CS090\"\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/borrow/add"
+		},
+		"response": []
+	}, {
+		"name": "New author",
+		"id": "a94b21ac-23cf-4f8c-8b1b-213d08191447",
+		"request": {
+			"method": "PUT",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"author_id\": \"sadasdsa\",\n    \"name\": \"Paulo Coelho\",\n    \"age\": 59,\n    \"books\": 24\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/author/add"
+		},
+		"response": []
+	}, {
+		"name": "Get all students",
+		"id": "0f416114-b8ed-403d-afd5-1a7618f8bfa9",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": "http://{{IP}}:{{PORT}}/student/fetch"
+		},
+		"response": []
+	}, {
+		"name": "Get all books",
+		"id": "b935fa2a-28ca-4949-8475-2a28d4d445de",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": "http://{{IP}}:{{PORT}}/book/fetch"
+		},
+		"response": []
+	}, {
+		"name": "Get all borrow",
+		"id": "d6b03850-b2e9-42ce-b925-155a4145d403",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": "http://{{IP}}:{{PORT}}/borrow/fetch"
+		},
+		"response": []
+	}, {
+		"name": "Get all Authors",
+		"id": "f7b71923-e928-4cd4-9d2f-24882162792f",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": "http://{{IP}}:{{PORT}}/author/fetch"
+		},
+		"response": []
+	}, {
+		"name": "Update Student",
+		"id": "8d076639-7e6d-486c-83cc-67b0ac8b273e",
+		"request": {
+			"method": "POST",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"SRN\": \"PES1UG19CS090\",\n    \"name\": \"Arvind Krishna\"\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/student/change"
+		},
+		"response": []
+	}, {
+		"name": "Update Book",
+		"id": "551177d1-0627-409b-b241-5f5b87781e37",
+		"request": {
+			"method": "POST",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"Author\": \"Paulo Coelho\",\n    \"_id\": \"sidsao\",\n    \"book_id\": \"sidsao\",\n    \"isBorrowed\": false,\n    \"name\": \"The Alchemist - the best book ever\"\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/book/change"
+		},
+		"response": []
+	}, {
+		"name": "Update Author",
+		"id": "99b7efec-d4fc-4553-a637-2ecf7ab00468",
+		"request": {
+			"method": "POST",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"name\": \"Paulo Coelho\",\n    \"author_id\": \"sadasdsa\",\n    \"age\": 68,\n    \"books\": 54\n    \n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/author/change"
+		},
+		"response": []
+	}, {
+		"name": "Delete Student",
+		"id": "58079b0f-a826-4f65-b753-ee17edd3ea09",
+		"request": {
+			"method": "DELETE",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"SRN\": \"PES1UG19CS090\"\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/student/remove"
+		},
+		"response": []
+	}, {
+		"name": "Delete book",
+		"id": "2917e6df-5443-4715-8411-591b666cc95c",
+		"request": {
+			"method": "DELETE",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"book_id\": \"test\"\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/book/remove"
+		},
+		"response": []
+	}, {
+		"name": "Return Book",
+		"id": "18c0cbf9-01e8-4abe-8396-0971ea57463f",
+		"request": {
+			"method": "DELETE",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"borrow_id\": \"rtyui\"\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/borrow/remove"
+		},
+		"response": []
+	}, {
+		"name": "Delete Author",
+		"id": "ba857c00-e247-4478-b1a8-e589c70cb414",
+		"request": {
+			"method": "DELETE",
+			"header": [],
+			"body": {
+				"mode": "raw",
+				"raw": "{\n    \"author_id\": \"rtyui\"\n}",
+				"options": {
+					"raw": {
+						"language": "json"
+					}
+				}
+			},
+			"url": "http://{{IP}}:{{PORT}}/author/remove"
+		},
+		"response": []
+	}, {
+		"name": "Fetch One Student",
+		"id": "87492f62-431c-410c-b870-e90a16cdcfef",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": "http://{{IP}}:{{PORT}}/student/fetch/P"
+		},
+		"response": []
+	}, {
+		"name": "Fetch One book",
+		"id": "6ecdffe9-44ed-48a7-b603-855713ddc7e7",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": "http://{{IP}}:{{PORT}}/book/fetch/sidsao"
+		},
+		"response": []
+	}, {
+		"name": "Fetch One borrow",
+		"id": "4a675bc4-f55c-44a4-a8b3-cc2b19992e79",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": "http://{{IP}}:{{PORT}}/borrow/fetch/sidsaoa"
+		},
+		"response": []
+	}, {
+		"name": "Fetch One Author",
+		"id": "54407ca2-a477-4c4f-90ee-629af0ffc30a",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": "http://{{IP}}:{{PORT}}/author/fetch/sadasdsa"
+		},
+		"response": []
+	}],
+	"event": [{
+		"listen": "prerequest",
+		"script": {
+			"id": "ee61e47e-9760-4c7e-93f2-7911ab0f1b02",
+			"type": "text/javascript",
+			"exec": [""]
+		}
+	}, {
+		"listen": "test",
+		"script": {
+			"id": "842b7554-67f7-432a-bd6c-d0e9a8b81c68",
+			"type": "text/javascript",
+			"exec": [""]
+		}
+	}],
+	"variable": [{
+		"id": "f31109f6-c102-4f97-91e4-153233b5e72f",
+		"key": "IP",
+		"value": "localhost",
+		"type": "string"
+	}, {
+		"id": "35bc7b8b-fcf8-4242-9cbb-2b0101b7b690",
+		"key": "PORT",
+		"value": "5000",
+		"type": "string"
+	}]
+}
